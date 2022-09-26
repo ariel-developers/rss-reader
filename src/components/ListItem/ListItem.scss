@@ -1,0 +1,39 @@
+@import "../../style/variables";
+
+.feed__item {
+  border-top: 1px solid $active-color;
+  padding: $base-margin;
+  cursor: pointer;
+  outline: none;
+
+  display: block;
+
+  &:hover,
+  &:focus {
+    background: $active-color;
+  }
+}
+
+.feed__item-image {
+  width: 80%;
+  margin: 6px;
+  border-radius: 8px;
+}
+
+.feed__item-date {
+  font-size: $small-font-size;
+}
+
+.feed__item-description {
+  margin: $small-margin 0 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr;
+  gap: 16px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". .";
+}
