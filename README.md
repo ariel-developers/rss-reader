@@ -2,44 +2,126 @@
 
 This app allows to subscribe to RSS feeds and read news from them. Reader will update all feeds automaticly.
 
-# App instruction
+## System Requirements
 
-How to use
+To get started with development, you need to install few tools
 
-Open the app
+1. git
 
-Add feed
-Enter a feed URL to the field "New feed" and click "Add" or press "Enter". New feed will apeear in the feeds list.
+   `git` version 2.13.1 or higher. Download [git](https://git-scm.com/downloads) if you don't have it already.
 
-Show feed
-To show news from feed, click on it in the list. Selected feed will open, with news list in there.
+   To check your version of git, run:
 
-Read news
-To read news, click on item in news list. A link will open in a new tab.
+   ```shell
+    git --version
+   ```
 
-Built with
-React - web framework
-SASS - style framework
+2. node
 
-# Available Scripts
+   `node` version 16.15.1 or higher. Download [node](https://nodejs.org/en/download/) if you don't have it already.
 
-to get started, just clone the repo and install the dependencies:
+   To check your version of node, run:
 
-> git clone
-> cd rss-reader
-> npm install
+   ```shell
+    node --version
+   ```
 
-after npm installs everything for you, you can start the app with the following command:
+3. npm
 
-### `npm start`
+   `npm` version 5.6.1 or higher. You will have it after you install node.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   To check your version of npm, run:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```shell
+    npm --version
+   ```
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To set up a development environment, please follow these steps:
+
+1. Clone the repo
+
+   ```shell
+    git clone
+   ```
+
+2. Change directory to the project directory
+
+   ```shell
+   cd project name
+   ```
+
+3. Install the dependencies
+
+   ```shell
+    npm install
+   ```cd desktop
+   
+
+   If you get an error, please check the console for more information.
+
+   If you don't get an error, you are ready to start development.
+
+4. Run the app
+
+   ```shell
+   npm run dev
+   ```
+
+   Project will be running in the browser.
+
+   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Issues
+
+You've found a bug in the source code, a mistake in the documentation or maybe you'd like a new feature? You can help us by [submitting an issue on GitHub]. Before you create an issue, make sure to search the issue archive -- your issue may have already been addressed!
+
+Please try to create bug reports that are:
+
+- _Reproducible._ Include steps to reproduce the problem.
+- _Specific._ Include as much detail as possible: which version, what environment, etc.
+- _Unique._ Do not duplicate existing opened issues.
+- _Scoped to a Single Bug._ One bug per report.
+
+## Pull Request
+
+There are 2 main work flows when dealing with pull requests:
+
+- Pull Request from a [forked repository](https://help.github.com/articles/fork-a-repo)
+- Pull Request from a branch within a repository
+
+Here we are going to focus on 2. Creating a Topical Branch:
+
+1. First, we will need to create a branch from the latest commit on master. Make sure your repository is up to date first using
+
+   ```bash
+    git pull origin main
+   ```
+
+   _Note:_ `git pull` does a `git fetch` followed by a `git merge` to update the local repo with the remote repo. For a more detailed explanation, see [this stackoverflow post](http://stackoverflow.com/questions/292357/whats-the-difference-between-git-pull-and-git-fetch).
+
+2. To create a branch, use `git checkout -b <new-branch-name> [<base-branch-name>]`, where `base-branch-name` is optional and defaults to `main`.
+
+   Use a standard convention for branch names. For example, `<your-name>-dev`. It will be easier to track your pull requests if you use this convention.
+
+   I'm going to create a new branch called `fabius-dev` from the `main` branch and push it to github.
+
+   ```bash
+    git checkout -b fabius-dev main
+    git push origin fabius-dev
+   ```
+
+3. To create a pull request, you must have changes committed to your new branch.
+
+4. Go to [Pull Requests] and click on the `New Pull Request` button.
+
+5. Select the `main` branch as the `base` branch and the `fabius-dev` branch as the `compare` branch.
+
+6. Follow the template and fill in the proper information for the pull request.
+
+7. Click on the `Submit` button.
+
+8. You have successfully created a pull request. Now wait for mentor approval. Once approved, you can merge the pull request.
+
+#
